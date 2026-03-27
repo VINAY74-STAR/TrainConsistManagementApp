@@ -11,5 +11,6 @@ public class TRAINCONSISTMANAGEMENTAPP{
 
         System.out.println("Train initialized successfully.");
         System.out.println("Initial number of bogies: " + bogies.size());
+        System.out.println("test");
     }
 }
