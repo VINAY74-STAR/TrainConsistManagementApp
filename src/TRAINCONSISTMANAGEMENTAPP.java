@@ -1,24 +1,28 @@
-import java.util.ArrayList;
+import java.util.LinkedList;
 
-public class TRAINCONSISTMANAGEMENTAPP{
-
+public class TRAINCONSISTMANAGEMENTAPP {
     public static void main(String[] args) {
 
-        ArrayList<String> passengerBogies = new ArrayList<>();
-        passengerBogies.add("Sleeper");
-        passengerBogies.add("AC Chair");
-        passengerBogies.add("First Class");
-        System.out.println("Passenger Bogies after addition:");
-        System.out.println(passengerBogies);
-        passengerBogies.remove("AC Chair");
-        System.out.println("\nAfter removing 'AC Chair':");
-        System.out.println(passengerBogies);
-        if (passengerBogies.contains("Sleeper")) {
-            System.out.println("\nSleeper bogie exists in the train.");
-        } else {
-            System.out.println("\nSleeper bogie does NOT exist.");
-        }
-        System.out.println("\nFinal Passenger Bogies:");
-        System.out.println(passengerBogies);
+        LinkedList<String> consist = new LinkedList<>();
+
+        consist.add("Engine");
+        consist.add("Sleeper");
+        consist.add("AC");
+        consist.add("Cargo");
+        consist.add("Guard");
+
+        System.out.println("Initial Train Consist:");
+        System.out.println(consist);
+
+        consist.add(2, "Pantry Car");
+
+        System.out.println("\nAfter adding Pantry Car at position 2:");
+        System.out.println(consist);
+
+        consist.removeFirst();
+        consist.removeLast();
+
+        System.out.println("\nAfter removing first and last bogie:");
+        System.out.println(consist);
     }
 }
