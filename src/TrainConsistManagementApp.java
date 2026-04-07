@@ -1,30 +1,40 @@
 import java.util.*;
 import java.util.stream.Collectors;
-
 class Bogie {
-    String type;
-    int capacity;
-    Bogie(String type, int capacity) {
+    private String id;
+    private String type;
+    private int capacity;
+    public Bogie(String id, String type, int capacity) {
+        this.id = id;
         this.type = type;
         this.capacity = capacity;
     }
+    public String getType() { return type; }
+    public String getId() { return id; }
     @Override
     public String toString() {
-        return type + " Bogie - Capacity: " + capacity;
+        return "Bogie{id='" + id + "', type='" + type + "'}";
     }
 }
 public class TrainConsistManagementApp {
     public static void main(String[] args) {
-        List<Bogie> bogies = new ArrayList<>();
-        bogies.add(new Bogie("Sleeper", 72));
-        bogies.add(new Bogie("AC Chair", 60));
-        bogies.add(new Bogie("First Class", 50));
-        bogies.add(new Bogie("Sleeper", 80));
-        bogies.add(new Bogie("AC Chair", 65));
-        List<Bogie> filteredBogies = bogies.stream()
-                .filter(b -> b.capacity > 60)
-                .collect(Collectors.toList());
-        System.out.println("Filtered Bogies:");
-        filteredBogies.forEach(System.out::println);
+        List<Bogie> trainConsist = Arrays.asList(
+                new Bogie("B001", "Sleeper", 72),
+                new Bogie("B002", "Goods", 0),
+                new Bogie("B003", "AC Chair", 60),
+                new Bogie("B004", "Sleeper", 72),
+                new Bogie("B005", "Goods", 0),
+                new Bogie("B006", "First Class", 24)
+        );
+        System.out.println("--- Original Train Consist ---");
+        trainConsist.forEach(System.out::println);
+        Map<String, List<Bogie>> groupedBogies = trainConsist.stream()
+                .collect(Collectors.groupingBy(Bogie::getType));
+        System.out.println("\n--- Bogies Grouped by Type ---");
+        groupedBogies.forEach((type, bogies) -> {
+            System.out.println(type + " Bogies: " + bogies);
+        });
+        System.out.println("\n--- Only Sleeper Bogies ---");
+        System.out.println(groupedBogies.getOrDefault("Sleeper", new ArrayList<>()));
     }
 }
