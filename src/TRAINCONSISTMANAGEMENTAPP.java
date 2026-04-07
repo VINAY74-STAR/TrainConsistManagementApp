@@ -1,16 +1,16 @@
-import java.util.LinkedHashSet;
-import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
 public class TRAINCONSISTMANAGEMENTAPP {
     public static void main(String[] args) {
-        Set<String> trainFormation = new LinkedHashSet<>();
-        trainFormation.add("Engine");
-        trainFormation.add("Sleeper");
-        trainFormation.add("Cargo");
-        trainFormation.add("Guard");
-        trainFormation.add("Sleeper");
-        System.out.println("Final Train Formation:");
-        for (String bogie : trainFormation) {
-            System.out.println(bogie);
+        Map<String,Integer> capacityMap = new HashMap<>();
+
+        capacityMap.put("First Class",76);
+        capacityMap.put("AC Chair",75);
+        capacityMap.put("Sleeper",45);
+        capacityMap.put("Cargo",35);
+        for(Map.Entry<String,Integer> Map :capacityMap.entrySet()){
+            System.out.println(Map.getKey()+"->"+Map.getValue());
+
         }
     }
 }
