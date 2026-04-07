@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7cd703cf-12b8-4736-9fd5-6455a4d4ee0d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TRAINCONSISTMANAGEMENTAPP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TRAINCONSISTMANAGEMENTAPP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TrainConsistManagementApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TrainConsistManagementApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +30,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "feature/UC7",
+    "git-widget-placeholder": "feature/UC8",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "C:/Users/Admin/Desktop/B2P11_RA300/TrainConsistManagementApp/src/Main.java"
   }
@@ -51,5 +51,16 @@
       <updated>1775550589534</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../../Program Files/Java/jdk-25.0.2/lib/src.zip!/java.base/java/io/PrintStream.java</url>
+          <line>1008</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
